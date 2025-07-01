@@ -57,13 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const maxScroll = document.body.scrollHeight - window.innerHeight;
       const scrollPercent = Math.min(scrollTop / maxScroll, 1);
   
-      const startColor = [29, 7, 95];
-      const endColor = [0, 53, 67];
+      const startColor = [16, 38, 77];
+      const endColor = [140, 14, 15];
   
       const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * scrollPercent);
       const g = Math.round(startColor[1] + (endColor[1] - startColor[1]) * scrollPercent);
       const b = Math.round(startColor[2] + (endColor[2] - startColor[2]) * scrollPercent);
   
+      header.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
       header.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
   });
