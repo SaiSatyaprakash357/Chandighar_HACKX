@@ -32,20 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-let mctext= ["Sam Worthington","Zoe Saldaña","Britain Dalton","Sigourney Weaver","Stephen Lang","Jack Champion","Cliff Curtis","Kate Winslet"]
-let ctext= ["Jake Sully","Neytiri","Lo'ak","Kiri","Miles Quaritch","Miles Socorro","Tonowari","Ronal"]
+const holder = document.querySelectorAll(".img-holder");
+const card = document.querySelectorAll(".cards");
 
-for (let i = 1; i <= 8; i++) {
-    let imgElement = document.getElementById(`img${i}`);
-    let textElement = document.getElementById(`text${i}`);
-
-    imgElement.addEventListener("mouseover", () => {
-        imgElement.src=`imgs/c${i}.jpg`;
-        textElement.innerHTML=ctext[i-1];
+for(let i=0; i<4; i++)
+{
+    card[i].addEventListener('mouseenter', () => {
+    holder[i].style.transform = "translateY(-10px)";
     });
-    imgElement.addEventListener("mouseout", () => {
-        imgElement.src=`imgs/mc${i}.jpg`;
-        textElement.innerHTML=mctext[i-1];
+
+    card[i].addEventListener('mouseleave', () => {
+    holder[i].style.transform = "translateY(0px)";
     });
 }
 
@@ -53,18 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
   
     window.addEventListener("scroll", () => {
-      const scrollTop = window.scrollY;
+      const scroll = window.scrollY;
       const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const scrollPercent = Math.min(scrollTop / maxScroll, 1);
+      const scrollPercent = scroll / maxScroll ;
+      console.log(scrollPercent);
   
-      const startColor = [16, 38, 77];
-      const endColor = [140, 14, 15];
+      const startColor = [11, 28, 60];
+      const endColor = [31, 77, 79];
   
       const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * scrollPercent);
       const g = Math.round(startColor[1] + (endColor[1] - startColor[1]) * scrollPercent);
       const b = Math.round(startColor[2] + (endColor[2] - startColor[2]) * scrollPercent);
   
-      header.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-      header.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      header.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${Math.max(0.8,1-(scrollPercent*0.2/0.35))})`;
     });
-  });
+});

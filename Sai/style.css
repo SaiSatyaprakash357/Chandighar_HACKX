@@ -7,7 +7,6 @@
 
 body {
   margin: 0;
-
 }
 
 header {
@@ -15,7 +14,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background: rgb(16, 38, 77);
+  background: rgb(11, 28, 60);
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   position: fixed;
   width: 100%;
   top: 0;
@@ -24,14 +25,16 @@ header {
 
 .logo {
     font-size: 26px;
-    color:#ffd700;
+    background: url("imgs/gold3.jpg");
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
     font-weight: 900;
 }
 
 .logo span {
     font-size: 24px;
     color:#d2fafe;
-    
 }
 
 nav ul {
@@ -40,12 +43,13 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: auto 15px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 16px;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -63,28 +67,31 @@ nav ul li a:hover {
 
 .btn {
   display: inline-block;
-  padding: 5px 20px;
-  background: #ffd700;
+  padding: 5px 15px;
+  background: url("imgs/gold.jpg");
+  background-size: cover;
   color: #0b1c3c;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 900;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #ffc107;
+  background: #0b1c3c;
+  color: #ffd700;
+  font-size: 1.3em;
+  box-shadow: 2px 4px 7px #ffd700;
 }
 
 .home {
   position: relative;
   height: 100vh;
   background: url('imgs/bg1_img.jpg') top center/cover no-repeat;
-  background-position-y: 30px;
-  padding-top: 150px;
-  padding-bottom: 50px;
+  padding: 175px 0 50px 0;
   overflow: hidden;
-  z-index: 2;
+  margin: 0;
 }
 
 .home::after {
@@ -99,12 +106,10 @@ nav ul li a:hover {
   rgba(11, 28, 60, 1.0) 90%, 
   rgba(11, 28, 60, 1.0) 100%
   );
-  z-index: 3;
 }
 
 .home-text {
   position: relative;
-  z-index: 4;
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
@@ -116,23 +121,24 @@ nav ul li a:hover {
   max-width: 1100px;
   display: flex;
   gap: 20px;
-  z-index: 5;
 }
+
 .poster img {
   width: 250px;
-  box-shadow: 0 4px 15px rgba(255, 192, 82, 0.4);
-  border-radius: 8px;
+  filter: drop-shadow(0 0 25px rgba(255, 185, 65, 0.7)) ;
 }
+
 .hcontent {
   flex: 1;
   padding: 20px;
   background: rgba(0, 17, 40, 0.3);
   border-radius: 20px;
   backdrop-filter: blur(4px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.9);
   color: #ffffff;
-  text-shadow: 0 0 7px #000000;
+  text-shadow: 0 0 10px #000000;
 }
+
 .description {
   font-weight: 700;
   margin: 15px 0;
@@ -143,7 +149,7 @@ nav ul li a:hover {
   #0b1c3c 0%,
   #0b1c3c 30%,
   #0b293c 40%,
-  #1f4d4f 55%,
+  rgb(31, 77, 79) 55%,
   #c89f53 100%
 );
 }
@@ -156,13 +162,13 @@ nav ul li a:hover {
 
 .feature-text{
     display: inline-block;
-    box-shadow: 3px 3px 5px 2px rgb(1, 123, 171);
+    box-shadow: 3px 3px 5px 2px rgba(255, 192, 82, 0.4);
     padding: 5px;
     width: 300px;
     height: 40px;
     border-radius: 50%;
-    color: #a1eefb;
-    background-color:rgba(0, 36, 47, 0.5) ;
+    color: #d2fafe;
+    background-color:#10264d ;
     margin-bottom: 30px;
 }
 
@@ -174,20 +180,29 @@ nav ul li a:hover {
   margin-top: 20px;
 }
 
+.img-holder {
+  display: flex;
+  border-radius: 50px 10px;
+  background: url("imgs/logo.png");
+  transition: 0.6s;
+}
+
 .cards{
-  border-radius: 30px;
-  width: 250px;
+  background-color: #00000000;
+  border-radius: 50px 10px;
+  width: 275px;
   padding: 20px;
   color: #ffffff;
   text-align: left;
-  backdrop-filter: blur(4px);
+  text-shadow: 0 0 10px #000000;
+  backdrop-filter: blur(15px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .cards:hover {
-  transform: translateY(-10px);
-  box-shadow: 5px 3px 10px 5px rgba(1, 123, 171, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 5px 3px 10px 5px rgba(255, 192, 82, 0.4);
 }
 
 .heading{
@@ -209,47 +224,56 @@ nav ul li a:hover {
   margin: 70px auto 0;
 }
 
-#sales-text {
+.text-wrapper {
+  background-color: #0b1c3c;
   display: inline-block;
-  color: #000000;
-  text-shadow: 0 0 1px rgb(0, 85, 85), 0 0 15px rgba(0, 255, 255, 0.8);
-  font-weight: 900;
-  margin-bottom: 30px;
-  padding: 7px 25px;
-  background-color: rgba(0, 160, 246, 0.1);
-  border-radius: 15px;
-  box-shadow:  0 0 2px rgb(0, 141, 141), 0 0 5px rgb(53, 66, 255), 0 0 10px rgba(0, 255, 255,0.5);
-  }
+  padding: 10px 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(11, 28, 60, 0.6);
+  margin: 50px;
+}
 
-  .bar-container {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-  }
-  .bar-label {
-    color: #a1eefb;
-    width: 30px;
-    text-align: right;
-    margin-right: 10px;
-    font-weight: bold;
-  }
-  .bar-wrapper {
-    flex: 1;
-    background-color: rgba(0, 68, 86, 0.4);
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-    height: 30px;
-  }
-  .bar {
-    height: 100%;
-    background:#001b91;
-  }
-  .bar-text {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color:#a1eefb;
-  }
+#sales-text {
+  font-size: 52px;
+  font-weight: 800;
+  background: url("imgs/gold.jpg");
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 12px rgba(255, 223, 0, 0.25);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.bar-container {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.bar-label {
+  color: #d2fafe;
+  width: 30px;
+  text-align: right;
+  margin-right: 70px;
+  font-weight: bold;
+}
+.bar-wrapper {
+  flex: 1;
+  background-color: #f4e3b266;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  height: 30px;
+}
+.bar {
+  height: 100%;
+  background:#1f4d4f;
+}
+.bar-text {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color:#a1eefb;
+}
