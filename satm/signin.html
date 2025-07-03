@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="signin.css">
+</head>
+
+<body>
+  <div class="modal active" id="loginModal">
+    <h2>Login</h2>
+    <input type="email" placeholder="you@example.com">
+    <input type="password" placeholder="Password">
+    <button class="btn">Login</button>
+    
+    <div class="register-link">
+      <p>Don't have an account?</p>
+      <button class="btn btn-signup" onclick="openModal('registerModal')">Register Here</button>
+    </div>
+  </div>
+
+  <div class="modal" id="registerModal">
+    <span class="back" onclick="closeModal('registerModal')"><</span>
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="you@example.com">
+    <input type="password" placeholder="Create Password">
+    <button class="btn btn-signup">Sign Up</button>
+  </div>
+
+  <script src="signin.js"></script>
+
+</body>
+</html>

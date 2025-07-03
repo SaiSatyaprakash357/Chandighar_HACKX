@@ -65,3 +65,22 @@ document.addEventListener("DOMContentLoaded", () => {
       header.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${Math.max(0.8,1-(scrollPercent*0.2/0.35))})`;
     });
 });
+
+
+const openSigninBtn = document.querySelector('#signinBtn');
+const popup = document.getElementById('signinPopup');
+const closeBtn = document.getElementById('closeSigninPopup');
+
+openSigninBtn.onclick = () => {
+  popup.style.display = 'flex';
+};
+
+closeBtn.onclick = () => {
+  popup.style.display = 'none';
+};
+
+window.onclick = (e) => {
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+};
