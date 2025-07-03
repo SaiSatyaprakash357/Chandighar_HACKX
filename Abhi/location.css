@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #000080;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #c0c0c0;
+  
+  padding: 30px;
+  box-shadow: 0 2px 10px #D4AF37;
+  border-radius: 12px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.flat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.flat-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.flat-card h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  color: #0077cc;
+}
+
+.flat-card p {
+  margin: 0;
+  font-size: 14px;
+}
