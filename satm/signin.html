@@ -5,22 +5,32 @@
   <title>Login & Register</title>
   <link rel="stylesheet" href="signin.css">
 </head>
-
 <body>
-  <div class="modal active" id="loginModal">
+
+  
+  <div class="modal active" id="selectRoleModal">
+    <h2>Continue As</h2>
+    <button class="btn" onclick="openModal('loginModal')">User</button>
+    <button class="btn btn-signup" onclick="openModal('builderLoginModal')">Builder</button>
+  </div>
+
+  
+  <div class="modal" id="loginModal">
+    <span class="back" onclick="goBackToRoleSelect()">&lt;</span>
     <h2>Login</h2>
     <input type="email" placeholder="you@example.com">
     <input type="password" placeholder="Password">
     <button class="btn">Login</button>
-    
+
     <div class="register-link">
       <p>Don't have an account?</p>
       <button class="btn btn-signup" onclick="openModal('registerModal')">Register Here</button>
     </div>
   </div>
 
+  
   <div class="modal" id="registerModal">
-    <span class="back" onclick="closeModal('registerModal')"><</span>
+    <span class="back" onclick="goBackToLogin()">&lt;</span>
     <h2>Sign Up</h2>
     <input type="text" placeholder="Full Name">
     <input type="email" placeholder="you@example.com">
@@ -28,7 +38,15 @@
     <button class="btn btn-signup">Sign Up</button>
   </div>
 
-  <script src="signin.js"></script>
+  
+  <div class="modal" id="builderLoginModal">
+    <span class="back" onclick="goBackToRoleSelect()">&lt;</span>
+    <h2>Builder Login</h2>
+    <input type="email" placeholder="builder@example.com">
+    <input type="password" placeholder="Password">
+    <button class="btn">Login</button>
+  </div>
 
+  <script src="signin.js"></script>
 </body>
 </html>

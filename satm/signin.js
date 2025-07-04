@@ -1,11 +1,20 @@
 function openModal(id) {
-document.getElementById('loginModal').classList.remove('active');
-document.getElementById(id).classList.add('active');
+  closeAllModals();
+  document.getElementById(id).classList.add("active");
 }
 
-function closeModal(id) {
-document.getElementById(id).classList.remove('active');
-if (id === 'registerModal') {
-    document.getElementById('loginModal').classList.add('active');
+function closeAllModals() {
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.classList.remove('active');
+  });
 }
+
+function goBackToRoleSelect() {
+  closeAllModals();
+  document.getElementById("selectRoleModal").classList.add("active");
+}
+
+function goBackToLogin() {
+  closeAllModals();
+  document.getElementById("loginModal").classList.add("active");
 }

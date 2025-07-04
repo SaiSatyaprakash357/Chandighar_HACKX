@@ -9,23 +9,103 @@ body {
     overflow: auto;
 }
 
+
 .modal {
     background: linear-gradient(155deg, 
-    rgba(11, 28, 60, 1.0) 0%,
-    rgba(16, 38, 77, 0.8) 50%,
-    rgba(242, 181, 67, 0.8) 80%,
-    rgba(242, 181, 67, 1.0) 100%
-    ); 
+        rgba(11, 28, 60, 1.0) 0%,
+        rgba(16, 38, 77, 0.8) 50%,
+        rgba(242, 181, 67, 0.8) 80%,
+        rgba(242, 181, 67, 1.0) 100%
+    );
     padding: 30px;
     width: 350px;
     height: 350px;
     border-radius: 20px;
     box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
-    position: relative;
+    position: absolute;
     text-align: center;
     display: none;
     backdrop-filter: blur(8px);
+    z-index: 10;
 }
+
+
+.modal.active {
+    display: block;
+}
+
+
+.modal h2 {
+    color: #ffd700;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+
+.modal input {
+    width: 80%;
+    padding: 10px;
+    margin: 8px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+
+.modal .btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #ffd700;   
+    border: none;
+    color: #0b1c3c;             
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+
+.modal .btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+.modal .btn-signup {
+    background-color: #0b1c3c;  
+    color: #ffd700;             
+    font-weight: 700;
+}
+
+
+.register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f0f8ff;
+}
+
+.register-link .btn {
+    width: auto;
+    padding: 10px 20px;
+}
+
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 28px;
+    color: #ffd700;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 10px #c89f53;
+}
+
 
 .back {
     color: #ffd700;
@@ -38,57 +118,7 @@ body {
     cursor: pointer;
 }
 
-.modal.active {
-    display: block;
-}
 
-.modal h2 {
-    color: #ffd700;
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.modal input {
-    width: 80%;                  
-    padding: 12px;
-    margin: 10px auto;
-    display: block;              
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-.modal .btn {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: white;
-    border: none;
-    color: #7b2ff7;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    margin-top: 10px;
-}
-
-.modal .btn:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-.modal .btn-signup {
-    color: #ff4081;
-}
-
-.register-link {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #f0f8ff;
-}
-
-.register-link .btn {
-    width: auto;
-    padding: 10px 20px;
+.modal:not(#selectRoleModal) .close {
+    display: none;
 }
