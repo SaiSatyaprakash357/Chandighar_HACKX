@@ -2,7 +2,7 @@ const flats = [
   { name: " Delhi", city: "Delhi", address:" Delhi" },
   { name: "Chennai", city: "Chennai", address: " Chennai" },
   { name: " Hyderabad", city: "Hyderabad", address: "Hyderabad" },
-  { name: "Bangalore", city: "Bangalore", address: " Bangalore" },
+  { name: "Bengaluru", city: "Bengaluru", address: " Bengaluru" },
 ];
 
 const searchInput = document.getElementById("searchInput");

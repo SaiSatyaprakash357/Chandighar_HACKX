@@ -2,12 +2,12 @@
 // Image Gallery Navigation
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
-        'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1431576901776-e539bd916ba2?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?w=800&h=600&fit=crop'
+        '../imgs/room1.jpg',
+        '../imgs/room2.jpg',
+        '../imgs/room3.jpg',
+        '../imgs/room4.jpg',
+        '../imgs/room5.jpg',
+        '../imgs/room6.jpg'
     ];
 
     let currentImageIndex = 0;
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Auto-play slideshow (optional)
-    setInterval(nextImage, 5000);
+    setInterval(nextImage, 2000);
 
     // Search Tab Functionality
     const searchTabs = document.querySelectorAll('.search-tab');

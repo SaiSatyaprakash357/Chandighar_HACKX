@@ -7,10 +7,11 @@ body {
 }
 
 header {
+  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 20px 50px;
+  padding: 10px 50px;
   background: linear-gradient(
     150deg,
     #10264d 0%,
