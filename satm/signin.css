@@ -62,7 +62,7 @@ body {
     color: #0b1c3c;             
     border-radius: 20px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -79,9 +79,18 @@ body {
 .modal .btn-signup {
     background-color: #0b1c3c;  
     color: #ffd700;             
-    font-weight: 700;
+    font-weight: 800;
 }
 
+#userBtn {
+    text-align: left;
+    margin: 50px 0 50px 0;
+}
+
+#builderBtn {
+    text-align: right;
+    margin: 50px 0 50px 0;
+}
 
 .register-link {
     margin-top: 20px;

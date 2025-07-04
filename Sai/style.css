@@ -26,7 +26,7 @@ header {
 
 .logo {
     font-size: 26px;
-    background: url("imgs/gold3.jpg");
+    background: url("../imgs/gold3.jpg");
     background-size: cover;
     background-clip: text;
     color: transparent;
@@ -69,7 +69,7 @@ nav ul li a:hover {
 .btn {
   display: inline-block;
   padding: 5px 15px;
-  background: url("imgs/gold.jpg");
+  background: url("../imgs/gold.jpg");
   background-size: cover;
   color: #0b1c3c;
   border-radius: 5px;
@@ -80,8 +80,10 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-  background: #0b1c3c;
-  color: #ffd700;
+  background: url("../imgs/gold3.jpg");
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
   font-size: 1.3em;
   box-shadow: 2px 4px 7px #ffd700;
 }
@@ -127,9 +129,10 @@ iframe {
 .home {
   position: relative;
   height: 100vh;
-  background: url('imgs/bg1_img.jpg') top center/cover no-repeat;
+  background: url('../imgs/bg1_img.jpg') top center/cover no-repeat;
   padding: 175px 0 0 0;
   overflow: hidden;
+  z-index: 1;
 }
 
 .home::after {
@@ -144,13 +147,12 @@ iframe {
   rgba(11, 28, 60, 1.0) 90%, 
   rgba(11, 28, 60, 1.0) 100%
   );
+  z-index: 2;
 }
 
-.home-text {
+.home-container {
   position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+  z-index: 3;
 }
 
 .container {
@@ -182,12 +184,22 @@ iframe {
   margin: 15px 0;
 }
 
+.findbtn-container {
+  display: flex;
+  justify-content: center;
+}
+
+#findBtn {
+  font-size: 2em;
+  font-weight: 900;
+}
+
 .content{
   background: linear-gradient(
   #0b1c3c 0%,
   #0b1c3c 25%,
   #0b293c 35%,
-  rgb(31, 77, 79) 55%,
+  #1f4d4f 55%,
   #c89f53 100%
 );
 }
@@ -221,7 +233,7 @@ iframe {
 .img-holder {
   display: flex;
   border-radius: 50px 10px;
-  background: url("imgs/logo.png");
+  background: url("../imgs/logo.png");
   transition: 0.6s;
 }
 
@@ -274,7 +286,7 @@ iframe {
 #sales-text {
   font-size: 52px;
   font-weight: 800;
-  background: url("imgs/gold.jpg");
+  background: url("../../imgs/gold.jpg");
   background-size: cover;
   background-clip: text;
   color: transparent;

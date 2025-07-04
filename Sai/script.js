@@ -84,3 +84,8 @@ window.onclick = (e) => {
     popup.style.display = 'none';
   }
 };
+
+const findBtn = document.querySelector('#findBtn');
+findBtn.onclick = () => {
+  window.location.href = "../Abhi/location.html";
+};

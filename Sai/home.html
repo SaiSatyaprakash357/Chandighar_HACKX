@@ -10,7 +10,7 @@
 <body>  
   <header>
     <h1 class="logo">BlockEstate <span>Secure Flats</span></h1>  
-    <nav>  
+    <nav>   
       <ul>  
         <li><a href="#home" class="active">Home</a></li>  
         <li><a href="#features">Features</a></li>  
@@ -24,9 +24,10 @@
   
 
   <section id="home" class="home">  
-    <div class="container">
+    <div class="home-container">
+      <div class="container">
         <div class="poster">
-          <img src="imgs/logo.png" alt="Avatar Poster">
+          <img src="../imgs/logo.png" alt="Logo">
         </div>
         <div class="hcontent">
           <div class="description">
@@ -43,11 +44,15 @@
               Payments are safely handled through Razorpay-linked virtual accounts with full transaction traceability, and ownership transfers are completed within a day (T+1).
             </p>
             <p>
-              Can’t visit the flat in person? Use our agent-assisted on-site verification or video walkthrough service before making a decision — no guesswork, just clarity.
+              Can't visit the flat in person? Use our agent-assisted on-site verification or video walkthrough service before making a decision — no guesswork, just clarity.
             </p>
           </div>
         </div>
       </div>
+      <div class="findbtn-container">
+        <button id="findBtn" class="btn">Find Your Dream Flat</button>
+      </div>
+    </div>
   </section>  
   
   <div class="content">
@@ -150,7 +155,7 @@
   <div id="signinPopup" class="modal">
     <div class="modal-content">
       <span class="close-btn" id="closeSigninPopup">&#128473;</span>
-      <iframe src="../satm/signin.html" ></iframe>
+      <iframe src="../Satm/signin.html" ></iframe>
     </div>
   </div>
 

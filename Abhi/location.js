@@ -22,6 +22,12 @@ searchInput.addEventListener("input", () => {
     </div>
   `).join("");
 
+  document.querySelectorAll('.flat-card').forEach(card => {
+    card.addEventListener('click', () => {
+      window.location.href = "flatlist.html";
+    });
+  });
+ 
   if (filtered.length === 0 && query.length > 0) {
     flatList.innerHTML = `<p>No area found.</p>`;
   }
