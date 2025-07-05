@@ -245,3 +245,8 @@ function performAdvancedSearch(searchData) {
         console.log('Search results would be displayed here');
     }, 1000);
 }
+
+const buyBtn = document.querySelector('.buy-btn');
+buyBtn.onclick = () => {
+  window.location.href = "../Sai/Payment Interface/pay.html";
+};

@@ -260,7 +260,7 @@ body {
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
 }
 
-.premium-badge {
+.buy-btn {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -268,9 +268,15 @@ body {
     color: #0b1c3c;
     padding: 0.5rem 1rem;
     border-radius: 25px;
-    font-size: 0.875rem;
+    font-size: 1.5rem;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.buy-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 7px 18px rgba(255, 215, 0, 0.4);
 }
 
 .property-specs {

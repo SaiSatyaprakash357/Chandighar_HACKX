@@ -1,0 +1,87 @@
+/* Color Palette */
+:root {
+  --deep-navy: #0b1c3c;
+  --midnight-blue: #10264d;
+  --royal-gold: #ffd700;
+  --pale-gold: #f4e3b2;
+  --light-blue: #d2fafe;
+  --aqua-glow: #00f5ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--deep-navy);
+  color: var(--light-blue);
+  padding: 40px;
+}
+
+.payment-container {
+  max-width: 600px;
+  margin: auto;
+  background: var(--midnight-blue);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px var(--aqua-glow);
+}
+
+.payment-container h1 {
+  text-align: center;
+  color: var(--pale-gold);
+  margin-bottom: 30px;
+}
+
+.va-card h2 {
+  color: var(--royal-gold);
+  margin-bottom: 20px;
+}
+
+.detail {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.detail label {
+  font-weight: bold;
+}
+
+.detail span {
+  color: var(--pale-gold);
+}
+
+.note {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 0.9em;
+  border-left: 4px solid var(--royal-gold);
+}
+
+.cta-button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: var(--royal-gold);
+  color: var(--deep-navy);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px var(--royal-gold);
+}
+
+.cta-button:hover {
+  background: var(--pale-gold);
+  color: var(--midnight-blue);
+  box-shadow: 0 0 15px var(--aqua-glow);
+}
